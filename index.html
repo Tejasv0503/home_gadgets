@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartHome | Advanced Smart Gadgets</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #161b22;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #58a6ff;
+    }
+
+    ul.menu {
+      list-style: none;
+      display: flex;
+    }
+
+    ul.menu li {
+      position: relative;
+      margin-left: 30px;
+    }
+
+    ul.menu li a {
+      text-decoration: none;
+      color: #c9d1d9;
+      padding: 10px;
+      display: block;
+      transition: color 0.3s;
+    }
+
+    ul.menu li a:hover {
+      color: #58a6ff;
+    }
+
+    ul.submenu {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      background: #21262d;
+      list-style: none;
+      padding: 10px;
+      border-radius: 5px;
+      min-width: 180px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    ul.menu li:hover > ul.submenu {
+      display: block;
+    }
+
+    ul.submenu li {
+      margin-bottom: 10px;
+    }
+
+    ul.submenu li:last-child {
+      margin-bottom: 0;
+    }
+
+    ul.submenu li a {
+      color: #c9d1d9;
+    }
+
+    ul.submenu li a:hover {
+      color: #58a6ff;
+    }
+
+    section {
+      padding: 80px 30px;
+      text-align: center;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 120px 20px;
+      animation: slideIn 1.5s ease-out;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .gadgets {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background:black;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .blog-entry {
+      background: #161b22;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 8px;
+      max-width: 800px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      text-align: left;
+    }
+
+    .blog-entry h3 {
+      color: #58a6ff;
+      margin-bottom: 10px;
+    }
+
+    .blog-entry p {
+      color: #c9d1d9;
+      line-height: 1.6;
+    }
+
+    footer {
+      background: #161b22;
+      color: #8b949e;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">SmartHome</div>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#">Products</a>
+          <ul class="submenu">
+            <li><a href="smart-light.html">Smart Lighting</a></li>
+            <li><a href="home_security.html ">Home Security</a></li>
+            <li><a href="climate_control.html">Climate Control</a></li>
+            <li><a href="entertainment.html">Entertainment</a></li>
+            <li><a href="smart_lighting.html">Smart Appliances</a></li>
+          </ul>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Experience Smart Living</h1>
+    <p>Explore the latest in smart home technology and make your living space more connected, efficient, and secure.</p>
+  </section>
+
+  <section id="products">
+    <h2>Featured Smart Gadgets</h2>
+    <div class="gadgets">
+      <div class="card">
+        <h3>Smart Light Bulb</h3>
+        <p>Energy-saving bulbs with app and voice control to set ambiance for any mood.</p>
+      </div>
+      <div class="card">
+        <h3>Video Doorbell</h3>
+        <p>Monitor your front door remotely with live video and motion alerts.</p>
+      </div>
+      <div class="card">
+        <h3>Smart Thermostat</h3>
+        <p>Automatically adjusts temperature based on your preferences to reduce energy costs.</p>
+      </div>
+      <div class="card">
+        <h3>Smart Plugs</h3>
+        <p>Turn devices on/off remotely and monitor power usage from your phone.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About SmartHome</h2>
+    <p>SmartHome is dedicated to transforming houses into intelligent living spaces. With a passion for innovation and user-friendly technology, we offer curated smart gadgets that make life simpler and safer.</p>
+  </section>
+
+  <section id="blog">
+    <h2>Our Blog</h2>
+    <div class="blog-entry">
+      <h3>Top 5 Smart Home Devices for Beginners</h3>
+      <p>Getting started with smart home gadgets can be overwhelming. Here are the top 5 must-have devices to begin your journey: smart lights, smart plugs, a voice assistant, smart thermostat, and security cameras. These provide convenience and security while being easy to install and use.</p>
+    </div>
+    <div class="blog-entry">
+      <h3>How to Set Up a Smart Lighting System</h3>
+      <p>Smart lighting can transform your home’s ambiance. Learn how to choose the right bulbs, connect them to your Wi-Fi or hub, and automate them using schedules or motion sensors. Voice control via Alexa or Google Assistant adds hands-free convenience.</p>
+    </div>
+    <div class="blog-entry">
+      <h3>Why Smart Thermostats Save You Money</h3>
+      <p>Smart thermostats learn your habits and optimize heating/cooling to reduce energy waste. With remote access and data insights, you can maintain comfort while cutting down utility bills. Discover how devices like Nest or Ecobee can make a difference.</p>
+    </div>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 SmartHome. Built for a smarter tomorrow.</p>
+  </footer>
+</body>
+</html>
